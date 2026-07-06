@@ -142,3 +142,34 @@
   opacity: 0;
   animation: fade-up 600ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
+/* Solar range slider */
+.solar-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+}
+.solar-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 3px solid oklch(0.98 0.01 240);
+  box-shadow: 0 4px 14px oklch(0.82 0.17 78 / 0.55);
+  cursor: pointer;
+}
+.solar-range::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 3px solid oklch(0.98 0.01 240);
+  box-shadow: 0 4px 14px oklch(0.82 0.17 78 / 0.55);
+  cursor: pointer;
+}
+
