@@ -3,7 +3,7 @@ import { ArrowRight, CreditCard, Calendar, Sparkles, FileText } from "lucide-rea
 
 const highlights = [
   { icon: Calendar, label: "Financiamento em até 84x" },
-  { icon: CreditCard, label: "Cartão de crédito em até 18x" },
+  { icon: CreditCard, label: "Cartão de crédito em até 24x" },
   { icon: Sparkles, label: "Condições facilitadas" },
   { icon: FileText, label: "Orçamento personalizado" },
 ];
@@ -20,7 +20,7 @@ export function Financing() {
             Financiamento
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl md:text-5xl">
-            Comece a economizar sem <span className="text-gradient-sun">descapitalizar</span>
+            Comece a economizar sem <span className="text-gradient-sun">gastar nada hoje.</span>
           </h2>
           <p className="mt-5 max-w-xl text-base text-white/80">
             Com opções de financiamento facilitado, você pode instalar seu sistema solar e começar a
