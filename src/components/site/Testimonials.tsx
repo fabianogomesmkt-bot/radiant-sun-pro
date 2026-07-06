@@ -1,9 +1,9 @@
-import { Star, Quote as QuoteIcon, ShieldCheck, ArrowRight, MessageCircle } from "lucide-react";
+import { Star, Quote as QuoteIcon, ShieldCheck } from "lucide-react";
 import residential from "@/assets/residential-solar.jpg";
 import commercial from "@/assets/commercial-solar.jpg";
 import panels from "@/assets/panels-detail.jpg";
 import team from "@/assets/team-install.jpg";
-import { waLink } from "@/lib/whatsapp";
+
 
 type Review = {
   name: string;
