@@ -49,7 +49,27 @@ export function Trust() {
                 Galeria de instalações — depoimentos de clientes em breve.
               </p>
             </div>
-          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { src: residential, alt: "Sistema solar residencial" },
+              { src: commercial, alt: "Sistema solar comercial" },
+              { src: rural, alt: "Sistema solar rural" },
+              { src: industrial, alt: "Sistema solar industrial" },
+            ].map((g) => (
+              <div key={g.alt} className="group relative overflow-hidden rounded-3xl shadow-card">
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  width={1280}
+                  height={960}
+                  loading="lazy"
+                  className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/70 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <div className="text-xs uppercase tracking-widest text-accent">Energy Sun</div>
+                  <div className="font-display text-lg font-semibold">{g.alt}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -58,3 +78,4 @@ export function Trust() {
     </section>
   );
 }
+
