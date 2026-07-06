@@ -31,12 +31,9 @@ export function Comparison() {
 
         {/* Desktop table */}
         <div className="mt-12 hidden overflow-hidden rounded-[28px] border border-accent/25 bg-[oklch(0.22_0.05_255)]/80 shadow-soft ring-1 ring-white/5 backdrop-blur md:block">
-          <div className="grid grid-cols-[1fr_auto_1.15fr] items-stretch">
+          <div className="grid grid-cols-[1fr_1fr] items-stretch">
             <div className="border-b border-white/10 px-6 py-4 text-center text-xs font-semibold uppercase tracking-widest text-white/60">
               Situação atual
-            </div>
-            <div className="border-b border-white/10 px-6 py-4 text-center text-xs font-semibold uppercase tracking-widest text-white/50">
-              Item
             </div>
             <div className="border-b border-accent/40 bg-accent/10 px-6 py-4 text-center text-xs font-semibold uppercase tracking-widest text-accent">
               Com Energy Sun
@@ -49,9 +46,6 @@ export function Comparison() {
                     <X className="h-4 w-4" />
                   </span>
                   <span>{r.before}</span>
-                </div>
-                <div className="flex items-center justify-center border-b border-white/5 px-4 py-5 last:border-b-0">
-                  <span className="h-8 w-px bg-white/10" />
                 </div>
                 <div className="flex items-center gap-3 border-b border-accent/15 bg-accent/5 px-6 py-5 text-sm font-medium text-white last:border-b-0">
                   <span className="inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-accent/20 text-accent">
