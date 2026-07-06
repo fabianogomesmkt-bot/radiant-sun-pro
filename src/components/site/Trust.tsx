@@ -49,6 +49,7 @@ export function Trust() {
                 Galeria de instalações — depoimentos de clientes em breve.
               </p>
             </div>
+          </div>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { src: residential, alt: "Sistema solar residencial" },
