@@ -1,9 +1,9 @@
-import { Star, Quote as QuoteIcon, ShieldCheck, ArrowRight, MessageCircle } from "lucide-react";
+import { Star, Quote as QuoteIcon, ShieldCheck } from "lucide-react";
 import residential from "@/assets/residential-solar.jpg";
 import commercial from "@/assets/commercial-solar.jpg";
 import panels from "@/assets/panels-detail.jpg";
 import team from "@/assets/team-install.jpg";
-import { waLink } from "@/lib/whatsapp";
+
 
 type Review = {
   name: string;
@@ -204,47 +204,8 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Transition band */}
-        <div className="mt-16 overflow-hidden rounded-3xl border border-border bg-gradient-deep p-8 text-white shadow-soft md:p-12">
-          <div className="grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
-            <div>
-              <h3 className="font-display text-2xl font-bold sm:text-3xl md:text-4xl">
-                Entenda por que nossos clientes estão{" "}
-                <span className="text-gradient-sun">tão satisfeitos</span>
-              </h3>
-              <p className="mt-3 max-w-xl text-sm text-white/80 md:text-base">
-                Da primeira conversa à instalação final, a Energy Sun cuida de cada etapa para entregar economia, segurança e tranquilidade.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {["Atendimento próximo", "Instalação ágil", "Pós-venda de verdade"].map(
-                  (chip) => (
-                    <span
-                      key={chip}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                      {chip}
-                    </span>
-                  ),
-                )}
-              </div>
-            </div>
-
-            <div className="flex md:justify-end">
-              <a
-                href={waLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-sun px-6 py-4 font-display text-sm font-semibold text-accent-foreground shadow-glow transition-transform hover:-translate-y-0.5 sm:text-base"
-              >
-                <MessageCircle className="h-5 w-5" />
-                Quero solicitar meu orçamento
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
 }
+
