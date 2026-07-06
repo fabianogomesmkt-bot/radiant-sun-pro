@@ -2,7 +2,7 @@ import { Ruler, FileCheck2, Wrench, SprayCan, Home, Building2, MessageCircle } f
 import { waLink } from "@/lib/whatsapp";
 
 const services = [
-  { icon: Ruler, title: "Projeto fotovoltaico", text: "Projetos personalizados, desenvolvidos com engenharia de ponta, respeitando as normas técnicas e buscando o melhor desempenho para cada cliente." },
+  { icon: Ruler, title: "Projeto fotovoltaico", text: "Projetos personalizados, desenvolvidos com engenharia de ponta, respeitando as normas técnicas e buscando o melhor desempenho para cada cliente. Para projetos industriais, também montamos o diagrama unifilar completo." },
   { icon: FileCheck2, title: "Homologação", text: "Cuidamos da aprovação do seu sistema junto à concessionária, reduzindo burocracias e garantindo mais tranquilidade no processo." },
   { icon: Wrench, title: "Instalação de energia solar", text: "Instalação realizada por equipe especializada, com qualidade, segurança, organização e acabamento profissional." },
   { icon: SprayCan, title: "Limpeza e manutenção", text: "Serviços de limpeza e manutenção para preservar a eficiência do sistema e garantir melhor desempenho ao longo do tempo." },
