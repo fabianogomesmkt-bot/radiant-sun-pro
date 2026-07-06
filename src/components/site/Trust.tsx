@@ -1,7 +1,8 @@
-import panels from "@/assets/panels-detail.jpg";
-import commercial from "@/assets/commercial-solar.jpg";
 import residential from "@/assets/residential-solar.jpg";
-import { Calculator, Cpu, FileCheck2, HardHat, LifeBuoy } from "lucide-react";
+import commercial from "@/assets/commercial-solar.jpg";
+import rural from "@/assets/rural-solar.jpg";
+import industrial from "@/assets/industrial-solar.jpg";
+import { Calculator, Cpu, FileCheck2, HardHat, LifeBuoy, ShieldCheck } from "lucide-react";
 
 const points = [
   { icon: Calculator, label: "Projeto calculado conforme o perfil de consumo" },
@@ -9,6 +10,7 @@ const points = [
   { icon: FileCheck2, label: "Homologação junto à concessionária" },
   { icon: HardHat, label: "Instalação com atenção à segurança" },
   { icon: LifeBuoy, label: "Acompanhamento após a entrega" },
+  { icon: ShieldCheck, label: "Garantia de 1 ano após a instalação" },
 ];
 
 export function Trust() {
@@ -23,7 +25,7 @@ export function Trust() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-5">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {points.map((p) => (
             <div
               key={p.label}
@@ -48,11 +50,12 @@ export function Trust() {
               </p>
             </div>
           </div>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { src: residential, alt: "Sistema solar residencial" },
-              { src: panels, alt: "Painéis solares em detalhe" },
               { src: commercial, alt: "Sistema solar comercial" },
+              { src: rural, alt: "Sistema solar rural" },
+              { src: industrial, alt: "Sistema solar industrial" },
             ].map((g) => (
               <div key={g.alt} className="group relative overflow-hidden rounded-3xl shadow-card">
                 <img

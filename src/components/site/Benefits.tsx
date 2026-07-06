@@ -4,7 +4,7 @@ const items = [
   { icon: Coins, title: "Redução na conta de energia", text: "Economia significativa todos os meses, com previsibilidade real no seu orçamento." },
   { icon: Home, title: "Valorização do imóvel", text: "Casas e empresas com energia solar têm valor de mercado maior." },
   { icon: Leaf, title: "Energia limpa e sustentável", text: "Geração silenciosa, renovável e sem emissão de poluentes." },
-  { icon: ShieldAlert, title: "Proteção contra aumentos", text: "Menos exposição às variações e reajustes da tarifa de energia." },
+  { icon: ShieldAlert, title: "Blindagem contra aumentos", text: "Menos exposição às variações e reajustes da tarifa de energia." },
   { icon: CreditCard, title: "Financiamento facilitado", text: "Comece a economizar sem comprometer o capital de giro ou a reserva." },
   { icon: TrendingUp, title: "Retorno sobre investimento", text: "Sistema que se paga ao longo do tempo e gera economia por décadas." },
 ];
