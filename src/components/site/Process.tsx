@@ -11,27 +11,27 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="relative bg-secondary py-20 md:py-28">
+    <section className="relative bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-accent">Como funciona</span>
-          <h2 className="mt-3 font-display text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[oklch(0.55_0.16_65)]">Como funciona</span>
+          <h2 className="mt-3 font-display text-3xl font-bold text-[oklch(0.20_0.08_255)] sm:text-4xl md:text-5xl">
             Do orçamento à instalação: <span className="text-gradient-sun">cuidamos de tudo para você</span>
           </h2>
         </div>
 
         <ol className="relative mt-16 grid gap-6 md:grid-cols-5">
-          <div className="absolute left-0 right-0 top-8 hidden h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent md:block" />
+          <div className="absolute left-0 right-0 top-8 hidden h-px bg-gradient-to-r from-transparent via-[oklch(0.20_0.08_255)]/20 to-transparent md:block" />
           {steps.map((s) => (
             <li key={s.n} className="relative">
               <div className="flex items-center justify-center">
-                <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-deep font-display text-lg font-bold text-white shadow-soft">
+                <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-sun font-display text-lg font-bold text-[oklch(0.20_0.08_255)] shadow-glow">
                   {s.n}
                 </div>
               </div>
-              <div className="mt-5 rounded-2xl border border-border bg-card p-5 text-center shadow-card">
-                <h3 className="font-display text-base font-semibold text-foreground">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              <div className="mt-5 rounded-2xl border border-[oklch(0.20_0.08_255)]/10 bg-white p-5 text-center shadow-card">
+                <h3 className="font-display text-base font-semibold text-[oklch(0.20_0.08_255)]">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.text}</p>
               </div>
             </li>
           ))}
