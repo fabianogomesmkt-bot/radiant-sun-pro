@@ -1,12 +1,16 @@
 import heroImg from "@/assets/hero-solar.jpg";
-import { ArrowRight, Star, ShieldCheck, FileCheck2, HardHat, CreditCard } from "lucide-react";
+import { ArrowRight, Star, ShieldCheck, FileCheck2, HardHat, CreditCard, Landmark } from "lucide-react";
 import { waLink } from "@/lib/whatsapp";
 
 const badges = [
   { icon: FileCheck2, label: "Homologação garantida" },
   { icon: ShieldCheck, label: "Garantia de 1 ano" },
   { icon: HardHat, label: "Instalação segura" },
-  { icon: CreditCard, label: "Parcelamento em até 24x" },
+];
+
+const paymentBadges = [
+  { icon: CreditCard, label: "Cartão em até 24x", sub: "juros reduzidos" },
+  { icon: Landmark, label: "Financiamento em até 120x", sub: "parcelas menores" },
 ];
 
 export function Hero() {
@@ -59,7 +63,7 @@ export function Hero() {
           </a>
         </div>
 
-        <ul className="mt-10 grid w-full max-w-3xl grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-4">
+        <ul className="mt-10 grid w-full max-w-3xl grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-3">
           {badges.map((b) => (
             <li
               key={b.label}
@@ -70,6 +74,35 @@ export function Hero() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-3 w-full max-w-3xl">
+          <div className="hidden sm:grid grid-cols-2 gap-3">
+            {paymentBadges.map((p) => (
+              <div
+                key={p.label}
+                className="flex items-center gap-3 rounded-full border border-accent/40 bg-gradient-to-r from-white/10 to-white/5 px-4 py-2.5 backdrop-blur"
+              >
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-sun text-accent-foreground shadow-[0_0_16px_oklch(0.82_0.17_78_/_0.45)]">
+                  <p.icon className="h-4 w-4" />
+                </span>
+                <div className="text-left">
+                  <p className="text-xs font-semibold text-white sm:text-sm">{p.label}</p>
+                  <p className="text-[10px] leading-tight text-white/70 sm:text-xs">{p.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="sm:hidden mx-auto flex max-w-xs items-center justify-center gap-2.5 rounded-full border border-accent/40 bg-gradient-to-r from-white/10 to-white/5 px-4 py-2.5 backdrop-blur">
+            <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-sun text-accent-foreground shadow-[0_0_12px_oklch(0.82_0.17_78_/_0.45)]">
+              <CreditCard className="h-3.5 w-3.5" />
+            </span>
+            <div className="text-left">
+              <p className="text-xs font-semibold text-white">Pagamento facilitado</p>
+              <p className="text-[10px] leading-tight text-white/70">24x no cartão ou 120x financiado</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
