@@ -1,10 +1,10 @@
 import { Check, X } from "lucide-react";
 
 const rows = [
-  { before: "Conta de luz alta todo mês", after: "Conta próxima de zero" },
+  { before: "Conta de luz alta todo mês", after: "Pague o mínimo na conta de energia" },
   { before: "Dependência da concessionária", after: "Autonomia energética" },
   { before: "Reajustes tarifários constantes", after: "Blindagem contra aumentos" },
-  { before: "Nenhum retorno financeiro", after: "Retorno do investimento a partir de 1 ano e 9 meses" },
+  { before: "Nenhum retorno financeiro", after: "Retorno do investimento a partir de 1 ano e 7 meses" },
   { before: "Imóvel sem diferencial", after: "Valorização imobiliária" },
   { before: "Impacto ambiental negativo", after: "Energia limpa e sustentável" },
 ];
