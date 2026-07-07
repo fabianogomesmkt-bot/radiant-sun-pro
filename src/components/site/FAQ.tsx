@@ -4,7 +4,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   { q: "Energia solar realmente reduz a conta de luz?", a: "Sim. O sistema gera energia a partir do sol e pode reduzir significativamente o valor pago mensalmente, dependendo do consumo e do projeto instalado." },
   { q: "A Energy Sun cuida da homologação?", a: "Sim. A equipe acompanha o processo junto à concessionária para facilitar a aprovação do sistema." },
-  { q: "Posso financiar meu sistema?", a: "Sim. Existem opções de financiamento em até 84x, conforme análise e condições disponíveis." },
+  { q: "Posso financiar meu sistema?", a: "Sim. Existem opções de financiamento em até 120x, conforme análise e condições disponíveis." },
   { q: "O sistema precisa de manutenção?", a: "Sim, mas a manutenção costuma ser simples. A limpeza e o acompanhamento ajudam a manter a eficiência dos painéis." },
   { q: "O orçamento tem custo?", a: "Não. O cliente pode solicitar uma análise inicial para entender a melhor solução para o seu perfil." },
 ];
