@@ -1,15 +1,18 @@
+import { useEffect, useState } from "react";
 import { Star, Quote as QuoteIcon, ShieldCheck } from "lucide-react";
-import residential from "@/assets/residential-solar.jpg";
-import commercial from "@/assets/commercial-solar.jpg";
-import panels from "@/assets/panels-detail.jpg";
-import team from "@/assets/team-install.jpg";
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 type Review = {
   name: string;
   time: string;
   comment: string;
-  images: string[];
 };
 
 const reviews: Review[] = [
@@ -18,28 +21,24 @@ const reviews: Review[] = [
     time: "2 meses atrás",
     comment:
       "Recomendo de mais, todo processo muito rápido, serviço da equipe desde a venda até a montagem é de total excelência parabéns pelo profissionalismo.",
-    images: [residential],
   },
   {
     name: "Jessica Gonçalves",
     time: "3 meses atrás",
     comment:
       "Obrigada a empresa e ao Amilton que foi o responsável no meu atendimento. Obrigada por toda assistência, paciência, dedicação e comprometimento a nos atender, a tirar dúvidas, a aconselhar e por entregar o que prometeu, estamos satisfeitos e super indico vocês.",
-    images: [residential, panels, team],
   },
   {
     name: "Eduardo Menezes",
     time: "3 meses atrás",
     comment:
       "Excelente serviço prestado pela empresa. Desde a fase do orçamento, com atendimento profissional e cortês pelo Sr Rafael. Após fechar o contrato, a instalação foi marcada com muita agilidade. Ao final da instalação, recebi a visita final para orientações e uso do app. Recomendo!",
-    images: [commercial, panels],
   },
   {
     name: "Patricia Gonçalves",
     time: "4 meses atrás",
     comment:
       "Excelente trabalho!! Material de ótima qualidade e entrega rápida. Diego e Rafael sempre disponíveis para tirar dúvidas. Indico e recomendo a Energy Sun.",
-    images: [residential, commercial, panels, team],
   },
 ];
 
@@ -74,14 +73,33 @@ function initials(name: string) {
 }
 
 export function Testimonials() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+    const onSelect = () => setCurrent(api.selectedScrollSnap());
+    api.on("select", onSelect);
+    api.on("reInit", () => {
+      setCount(api.scrollSnapList().length);
+      setCurrent(api.selectedScrollSnap());
+    });
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
   return (
-    <section id="avaliacoes" className="relative overflow-hidden py-20 md:py-28">
+    <section id="avaliacoes" className="relative overflow-hidden py-16 md:py-20">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/40 via-background to-background" />
       <div className="absolute -top-32 left-1/2 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
 
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         {/* Header */}
-        <div className="grid items-end gap-10 md:grid-cols-[1.2fr_1fr]">
+        <div className="grid items-end gap-8 md:grid-cols-[1.2fr_1fr]">
           <div>
             <span className="text-xs font-semibold uppercase tracking-widest text-accent">
               Prova social
@@ -91,19 +109,18 @@ export function Testimonials() {
               <span className="text-gradient-sun">Energy Sun</span>
             </h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              A satisfação dos nossos clientes é uma das maiores provas do nosso compromisso com qualidade, agilidade e atendimento profissional.
+              Avaliações reais no Google, com destaque para atendimento, instalação e pós-venda.
             </p>
           </div>
 
-          {/* Google badge */}
-          <div className="rounded-3xl border border-white/20 bg-white p-6 text-slate-900 shadow-card">
+          <div className="rounded-3xl border border-white/20 bg-white p-5 text-slate-900 shadow-card">
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
-                <GoogleG className="h-7 w-7" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+                <GoogleG className="h-6 w-6" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <div className="text-sm font-semibold text-slate-900">
-                  Avaliações reais de clientes no Google
+                  Avaliações reais no Google
                 </div>
                 <div className="mt-1 flex items-center gap-2">
                   <Stars />
@@ -113,99 +130,87 @@ export function Testimonials() {
                 </div>
               </div>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              Clientes satisfeitos com o atendimento, instalação, agilidade e pós-venda da Energy Sun.
-            </p>
-            <div className="mt-4 flex items-center gap-2 rounded-2xl bg-accent/15 px-4 py-3 text-xs font-semibold text-[oklch(0.35_0.12_70)]">
-              <ShieldCheck className="h-4 w-4" />
+            <div className="mt-3 flex items-center gap-2 rounded-2xl bg-accent/15 px-3 py-2 text-xs font-semibold text-[oklch(0.35_0.12_70)]">
+              <ShieldCheck className="h-4 w-4 shrink-0" />
               Alto volume de comentários positivos no setor solar
             </div>
           </div>
         </div>
 
-        {/* Authority line */}
-        <p className="mt-10 max-w-3xl text-base font-medium text-foreground">
-          A Energy Sun se destaca pelo alto volume de comentários positivos no setor de energia solar fotovoltaica e renovável.
-        </p>
-
-        {/* Review cards */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {reviews.map((r, i) => (
-            <article
-              key={r.name}
-              className="group relative animate-fade-up rounded-3xl border border-white/10 bg-white p-6 text-slate-900 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft md:p-7"
-              style={{ animationDelay: `${i * 90}ms` }}
-            >
-              {/* Google chip top-right */}
-              <div className="absolute right-5 top-5 flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-slate-600 backdrop-blur">
-                <GoogleG className="h-3.5 w-3.5" />
-                Avaliação Google
-              </div>
-
-              {/* Header */}
-              <div className="flex items-center gap-3 pr-28">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-sun font-display text-lg font-bold text-accent-foreground shadow-glow">
-                  {initials(r.name)}
-                </div>
-                <div className="min-w-0">
-                  <div className="truncate font-display text-base font-semibold text-slate-900">
-                    {r.name}
-                  </div>
-                  <div className="text-xs text-slate-500">Avaliação no Google</div>
-                </div>
-              </div>
-
-              {/* Stars + time */}
-              <div className="mt-4 flex items-center gap-3">
-                <Stars />
-                <span className="text-xs text-slate-500">{r.time}</span>
-              </div>
-
-              {/* Comment */}
-              <div className="relative mt-4">
-                <QuoteIcon
-                  className="absolute -left-1 -top-1 h-5 w-5 text-accent/60"
-                  aria-hidden
-                />
-                <p className="pl-6 text-sm leading-relaxed text-slate-700">
-                  {r.comment}
-                </p>
-              </div>
-
-              {/* Images */}
-              {r.images.length > 0 && (
-                <div
-                  className={`mt-5 grid gap-2 ${
-                    r.images.length === 1
-                      ? "grid-cols-1"
-                      : r.images.length === 2
-                        ? "grid-cols-2"
-                        : r.images.length === 3
-                          ? "grid-cols-3"
-                          : "grid-cols-4"
-                  }`}
+        {/* Carousel */}
+        <div className="mt-10">
+          <Carousel
+            setApi={setApi}
+            opts={{ align: "start", loop: true }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {reviews.map((r) => (
+                <CarouselItem
+                  key={r.name}
+                  className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
                 >
-                  {r.images.map((src, idx) => (
-                    <div
-                      key={idx}
-                      className="relative overflow-hidden rounded-xl border border-border"
-                    >
-                      <img
-                        src={src}
-                        alt={`Projeto Energy Sun avaliado por ${r.name}`}
-                        loading="lazy"
-                        className="aspect-square h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))}
-        </div>
+                  <article className="group relative flex h-full flex-col rounded-3xl border border-white/10 bg-white p-6 text-slate-900 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft">
+                    <QuoteIcon
+                      className="absolute right-5 top-5 h-8 w-8 text-accent/30"
+                      aria-hidden
+                    />
 
+                    <div className="flex items-center gap-3 pr-10">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-sun font-display text-base font-bold text-accent-foreground shadow-glow">
+                        {initials(r.name)}
+                      </div>
+                      <div className="min-w-0">
+                        <div className="truncate font-display text-sm font-semibold text-slate-900">
+                          {r.name}
+                        </div>
+                        <div className="mt-0.5 flex items-center gap-2">
+                          <Stars size={13} />
+                          <span className="text-[11px] text-slate-500">{r.time}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p className="mt-4 flex-1 text-sm leading-relaxed text-slate-700">
+                      {r.comment}
+                    </p>
+
+                    <div className="mt-5 flex items-center gap-1.5 text-[11px] font-medium text-slate-500">
+                      <GoogleG className="h-3.5 w-3.5" />
+                      Avaliação Google
+                    </div>
+                  </article>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            <div className="mt-6 flex items-center justify-between gap-4">
+              {/* Dots */}
+              <div className="flex items-center gap-2">
+                {Array.from({ length: count }).map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    aria-label={`Ir para depoimento ${i + 1}`}
+                    onClick={() => api?.scrollTo(i)}
+                    className={`h-2 rounded-full transition-all ${
+                      i === current
+                        ? "w-6 bg-accent"
+                        : "w-2 bg-primary/25 hover:bg-primary/40"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Arrows */}
+              <div className="flex items-center gap-2">
+                <CarouselPrevious className="static translate-x-0 translate-y-0 h-10 w-10 border-primary/20 bg-white text-primary hover:bg-accent hover:text-accent-foreground hover:border-accent" />
+                <CarouselNext className="static translate-x-0 translate-y-0 h-10 w-10 border-primary/20 bg-white text-primary hover:bg-accent hover:text-accent-foreground hover:border-accent" />
+              </div>
+            </div>
+          </Carousel>
+        </div>
       </div>
     </section>
   );
 }
-
