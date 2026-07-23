@@ -1,7 +1,12 @@
-import residential from "@/assets/residential-solar.jpg";
-import commercial from "@/assets/commercial-solar.jpg";
-import rural from "@/assets/rural-solar.jpg";
-import industrial from "@/assets/industrial-solar.jpg";
+import residentialAsset from "@/assets/residencial-solar.png.asset.json";
+import commercialAsset from "@/assets/comercial-solar.png.asset.json";
+import ruralAsset from "@/assets/rural-solar.png.asset.json";
+import industrialAsset from "@/assets/industrial-solar.png.asset.json";
+
+const residential = residentialAsset.url;
+const commercial = commercialAsset.url;
+const rural = ruralAsset.url;
+const industrial = industrialAsset.url;
 import { Calculator, Cpu, FileCheck2, HardHat, LifeBuoy, ShieldCheck } from "lucide-react";
 
 const points = [
