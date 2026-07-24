@@ -1,4 +1,5 @@
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/energy-sun-logo.png.asset.json";
+const logo = logoAsset.url;
 import { Instagram, MessageCircle, Clock } from "lucide-react";
 import { WHATSAPP_DISPLAY, waLink } from "@/lib/whatsapp";
 
