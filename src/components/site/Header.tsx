@@ -32,7 +32,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="Energy Sun" width={160} height={40} className="h-10 w-auto" />
+          <img src={logo} alt="Energy Sun" width={400} height={100} className="h-[100px] w-auto" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -77,7 +77,7 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3">
-          <img src={logo} alt="Energy Sun" width={144} height={36} className="h-9 w-auto" />
+          <img src={logo} alt="Energy Sun" width={360} height={90} className="h-[90px] w-auto" />
           <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="rounded-md p-2 text-white">
             <X className="h-6 w-6" />
           </button>
