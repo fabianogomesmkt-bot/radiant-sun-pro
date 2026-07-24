@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logoAsset from "@/assets/energy-sun-logo.png.asset.json";
+import logoAsset from "@/assets/energy-sun-logo-full.png.asset.json";
 const logo = logoAsset.url;
 import { waLink } from "@/lib/whatsapp";
 
