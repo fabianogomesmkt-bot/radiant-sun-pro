@@ -77,10 +77,7 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3">
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="Energy Sun" width={36} height={36} className="h-9 w-9" />
-            <span className="font-display font-bold text-white">Energy Sun</span>
-          </div>
+          <img src={logo} alt="Energy Sun" width={144} height={36} className="h-9 w-auto" />
           <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="rounded-md p-2 text-white">
             <X className="h-6 w-6" />
           </button>
