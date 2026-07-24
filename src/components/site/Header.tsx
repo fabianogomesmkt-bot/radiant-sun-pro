@@ -32,15 +32,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="Energy Sun" width={40} height={40} className="h-10 w-10" />
-          <div className="leading-tight">
-            <div className={`font-display text-base font-bold ${scrolled ? "text-foreground" : "text-white"}`}>
-              Energy Sun
-            </div>
-            <div className={`text-[10px] uppercase tracking-widest ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
-              Energias Renováveis
-            </div>
-          </div>
+          <img src={logo} alt="Energy Sun" width={160} height={40} className="h-10 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
