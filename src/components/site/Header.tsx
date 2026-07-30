@@ -63,7 +63,7 @@ export function Header() {
         <button
           aria-label="Abrir menu"
           onClick={() => setOpen(true)}
-          className={`lg:hidden rounded-md p-2 ${scrolled ? "text-foreground" : "text-white"}`}
+          className={`ml-auto lg:ml-0 rounded-md p-2 ${scrolled ? "text-foreground" : "text-white"}`}
         >
           <Menu className="h-6 w-6" />
         </button>
