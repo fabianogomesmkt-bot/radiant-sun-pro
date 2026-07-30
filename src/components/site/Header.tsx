@@ -29,9 +29,9 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 md:px-8">
-        <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="Energy Sun" className="h-[42px] w-auto md:h-[54px]" />
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 md:px-8">
+        <a href="#home" className="flex items-center gap-2 lg:static absolute left-1/2 -translate-x-1/2">
+          <img src={logo} alt="Energy Sun" className="h-[63px] w-auto md:h-[81px]" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
