@@ -1,5 +1,4 @@
-import logoAsset from "@/assets/energy-sun-logo-full.png.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/energy-sun-logo-cropped.png";
 import { Instagram, MessageCircle, Clock } from "lucide-react";
 import { WHATSAPP_DISPLAY, waLink } from "@/lib/whatsapp";
 
@@ -9,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4 md:px-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Energy Sun" width={500} height={140} className="h-[140px] w-auto" />
+            <img src={logo} alt="Energy Sun" className="h-[72px] w-auto" />
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
             Engenharia, instalação e suporte em energia solar fotovoltaica para residências, empresas
