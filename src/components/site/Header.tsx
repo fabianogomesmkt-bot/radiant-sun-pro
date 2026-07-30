@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logoAsset from "@/assets/energy-sun-logo-full.png.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/energy-sun-logo-cropped.png";
 import { waLink } from "@/lib/whatsapp";
 
 const nav = [
@@ -30,9 +29,9 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 md:px-8">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="Energy Sun" width={400} height={100} className="h-[60px] w-auto md:h-[70px]" />
+          <img src={logo} alt="Energy Sun" className="h-[42px] w-auto md:h-[54px]" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -77,7 +76,7 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3">
-          <img src={logo} alt="Energy Sun" width={360} height={90} className="h-[48px] w-auto" />
+          <img src={logo} alt="Energy Sun" className="h-[40px] w-auto" />
           <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="rounded-md p-2 text-white">
             <X className="h-6 w-6" />
           </button>
