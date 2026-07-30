@@ -29,9 +29,9 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 md:px-8">
-        <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="Energy Sun" className="h-[42px] w-auto md:h-[54px]" />
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:py-2.5 md:px-8">
+        <a href="#home" className="flex items-center gap-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:left-auto lg:top-auto lg:translate-x-0 lg:translate-y-0">
+          <img src={logo} alt="Energy Sun" className="h-[63px] w-auto md:h-[81px]" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -63,7 +63,7 @@ export function Header() {
         <button
           aria-label="Abrir menu"
           onClick={() => setOpen(true)}
-          className={`lg:hidden rounded-md p-2 ${scrolled ? "text-foreground" : "text-white"}`}
+          className={`ml-auto lg:ml-0 rounded-md p-2 ${scrolled ? "text-foreground" : "text-white"}`}
         >
           <Menu className="h-6 w-6" />
         </button>
@@ -76,7 +76,7 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between px-4 py-3">
-          <img src={logo} alt="Energy Sun" className="h-[40px] w-auto" />
+          <img src={logo} alt="Energy Sun" className="h-[60px] w-auto" />
           <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="rounded-md p-2 text-white">
             <X className="h-6 w-6" />
           </button>
