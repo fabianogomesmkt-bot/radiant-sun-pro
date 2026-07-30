@@ -29,7 +29,7 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 md:px-8">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:py-2.5 md:px-8">
         <a href="#home" className="flex items-center gap-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:left-auto lg:top-auto lg:translate-x-0 lg:translate-y-0">
           <img src={logo} alt="Energy Sun" className="h-[63px] w-auto md:h-[81px]" />
         </a>
