@@ -36,7 +36,7 @@ export function Hero() {
 
         <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-7xl">
           Economize até{" "}
-          <span className="text-gradient-sun">95% na sua conta</span>{" "}
+          <span className="text-gradient-sun">80% na sua conta</span>{" "}
           de energia.
         </h1>
 

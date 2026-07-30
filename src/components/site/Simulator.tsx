@@ -110,11 +110,11 @@ export function Simulator() {
           </a>
 
           <p className="mt-5 text-center text-xs text-white/60">
-            Em muitos projetos, o retorno do investimento pode acontecer a partir de 1 ano e 9 meses.
+            Em muitos projetos, o retorno do investimento pode acontecer a partir de 1 ano e 7 meses.
           </p>
 
           <p className="mt-3 text-center text-[11px] leading-relaxed text-white/45">
-            *Simulação estimada com base em até 90% de economia. Os valores reais podem variar
+            *Simulação estimada com base em até 80% de economia. Os valores reais podem variar
             conforme consumo, localização, dimensionamento do sistema e condições da concessionária.
           </p>
         </div>
