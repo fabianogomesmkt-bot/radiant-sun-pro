@@ -69,8 +69,11 @@ export function Trust() {
                   width={1280}
                   height={960}
                   loading="lazy"
-                  className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  decoding="async"
+                  className="h-72 w-full object-cover [image-rendering:auto] [filter:contrast(1.12)_saturate(1.12)_brightness(1.03)] transition-transform duration-700 group-hover:scale-105"
+                  style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <div className="text-xs uppercase tracking-widest text-accent">Energy Sun</div>
