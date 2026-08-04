@@ -9,7 +9,7 @@ export function Simulator() {
   const [bill, setBill] = useState(500);
 
   const { monthly, yearly, total25 } = useMemo(() => {
-    const monthly = bill * 0.9;
+    const monthly = bill * 0.8;
     return {
       monthly,
       yearly: monthly * 12,
