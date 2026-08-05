@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import residentialAsset from "@/assets/residencia-solar.png.asset.json";
+import residentialAsset from "@/assets/residencial-solar.png.asset.json";
 import commercialAsset from "@/assets/comercial-solar.png.asset.json";
 import ruralAsset from "@/assets/rural-solar.png.asset.json";
 import industrialAsset from "@/assets/industrial-solar.png.asset.json";
