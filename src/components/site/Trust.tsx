@@ -55,7 +55,7 @@ export function Trust() {
               </p>
             </div>
           </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { src: residential, alt: "Sistema solar residencial" },
               { src: commercial, alt: "Sistema solar comercial" },
@@ -70,7 +70,7 @@ export function Trust() {
                   height={960}
                   loading="lazy"
                   decoding="async"
-                  className="h-72 w-full object-cover [image-rendering:auto] [filter:contrast(1.12)_saturate(1.12)_brightness(1.03)] transition-transform duration-700 group-hover:scale-105"
+                  className="h-96 w-full object-cover [image-rendering:auto] [filter:contrast(1.18)_saturate(1.18)_brightness(1.05)_drop-shadow(0_0_0.5px_oklch(0.20_0.08_255/0.3))] transition-transform duration-700 group-hover:scale-105"
                   style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}
                 />
 
